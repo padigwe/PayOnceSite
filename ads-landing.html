@@ -180,8 +180,20 @@ textarea{resize:none;min-height:72px}
 
 /* Research: consent + submit */
 .consent-wrap{display:flex;align-items:flex-start;gap:10px;margin:14px 0 0}
-.consent-wrap input[type="checkbox"]{width:17px;height:17px;min-width:17px;margin-top:2px;accent-color:#000;cursor:pointer;padding:0;border:none}
-.consent-label{font-size:12px;color:var(--text3);line-height:1.55;cursor:pointer}
+.consent-wrap input[type="checkbox"]{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.consent-label{font-size:12px;color:var(--text3);line-height:1.55;cursor:pointer;display:flex;align-items:flex-start;gap:10px}
+.cb-box{
+  width:20px;height:20px;min-width:20px;min-height:20px;
+  border:2px solid rgba(255,255,255,0.4);border-radius:5px;
+  background:transparent;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;cursor:pointer;
+  transition:background .18s,border-color .18s;
+}
+.cb-box svg{display:none;width:12px;height:12px}
+.consent-wrap input[type="checkbox"]:checked + .consent-label .cb-box{background:#fff;border-color:#fff}
+.consent-wrap input[type="checkbox"]:checked + .consent-label .cb-box svg{display:block}
+.consent-wrap input[type="checkbox"]:focus-visible + .consent-label .cb-box{outline:3px solid rgba(255,255,255,0.3);outline-offset:2px}
 
 .form-err{display:none;border-radius:8px;padding:10px 14px;font-size:12.5px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;margin-top:10px}
 .form-err.show{display:block}
@@ -592,7 +604,12 @@ footer{background:#fff;border-top:1px solid var(--bdl);padding:32px 0}
 
             <div class="consent-wrap">
               <input type="checkbox" id="consent" name="consent" required>
-              <label class="consent-label" for="consent">I agree to be contacted by Pay Once Sites about my website enquiry, including by phone, email or WhatsApp.</label>
+              <label class="consent-label" for="consent">
+                <span class="cb-box">
+                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 6L4.5 9L10.5 3" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                I agree to be contacted by Pay Once Sites about my website enquiry, including by phone, email or WhatsApp.
+              </label>
             </div>
 
             <div style="margin-top:16px">
@@ -1129,11 +1146,20 @@ form.addEventListener('submit', async e => {
     const empty = f.type === 'checkbox' ? !f.checked : !f.value.trim();
     if(empty){
       valid = false;
-      f.style.borderColor = '#dc2626';
-      f.style.boxShadow = '0 0 0 3px rgba(220,38,38,0.07)';
-      const reset = () => { f.style.borderColor = ''; f.style.boxShadow = ''; };
-      f.addEventListener('input', reset, {once:true});
-      f.addEventListener('change', reset, {once:true});
+      if(f.type === 'checkbox'){
+        const box = f.nextElementSibling && f.nextElementSibling.querySelector('.cb-box');
+        if(box){
+          box.style.borderColor = '#f87171';
+          box.style.boxShadow = '0 0 0 3px rgba(248,113,113,0.15)';
+          f.addEventListener('change', () => { box.style.borderColor = ''; box.style.boxShadow = ''; }, {once:true});
+        }
+      } else {
+        f.style.borderColor = '#dc2626';
+        f.style.boxShadow = '0 0 0 3px rgba(220,38,38,0.07)';
+        const reset = () => { f.style.borderColor = ''; f.style.boxShadow = ''; };
+        f.addEventListener('input', reset, {once:true});
+        f.addEventListener('change', reset, {once:true});
+      }
     }
   });
   if(!valid) return;
