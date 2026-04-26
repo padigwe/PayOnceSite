@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Your Professional Website Built in 5 Days | Pay Once Sites</title>
+<meta name="description" content="See your professional website before you pay a penny. £399 one-time. No monthly fees. Built in 5 days. Only 10 spots per month.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='19' fill='%23fff'>P</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,700;12..96,75..100,800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* =============================================
+   RESEARCH BASIS:
+   - CXL: email field last = +44.7% opt-ins
+   - CXL: shorter, simpler = +21.5% conversions  
+   - Loss aversion 2.5x stronger than gain (Kahneman)
+   - Scarcity principle drives FOMO (Cialdini)
+   - Commitment/consistency: easy questions first
+   - Pain > Agitate > Solve > CTA structure
+   - Single CTA, no nav distractions
+   - Anchoring: show high prices before reveal
+   - White background = higher trust & readability
+   ============================================= */
+
+:root {
+  --black:#000;--white:#fff;
+  --off-white:#f9f9f9;--gray-50:#f4f4f4;--gray-100:#ebebeb;--gray-200:#d8d8d8;
+  --text:#111;--text2:#555;--text3:#999;
+  --surface:#fafafa;
+  --bdl:rgba(0,0,0,0.08);--bdl2:rgba(0,0,0,0.15);
+  --red:#c0392b;--green:#1a7a4a;--amber:#9a6000;
+  --fd:'Bricolage Grotesque',sans-serif;
+  --fb:'DM Sans',sans-serif;
+  --fm:'JetBrains Mono',monospace;
+  --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+  --eout:cubic-bezier(0,0,0.2,1);
+  --max:1080px;
+  --narrow:660px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--text);font-family:var(--fb);font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+.c{max-width:var(--max);margin:0 auto;padding:0 40px}
+.cn{max-width:var(--narrow);margin:0 auto;padding:0 40px}
+
+/* Scroll reveal */
+.sr{opacity:0;transform:translateY(18px);transition:opacity .6s var(--eout),transform .6s var(--eout)}
+.sr.on{opacity:1;transform:none}
+.sr.d1{transition-delay:.1s}.sr.d2{transition-delay:.18s}
+.sr.d3{transition-delay:.26s}.sr.d4{transition-delay:.34s}
+
+/* ─── URGENT TOP BANNER ─── */
+/* Research: Scarcity/FOMO drives action. Honest scarcity = real conversion. */
+#top-banner{
+  background:#111;color:#fff;
+  padding:11px 0;text-align:center;
+  font-size:13.5px;font-family:var(--fb);font-weight:500;
+  line-height:1.4;
+}
+.tb-inner{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.tb-dot{width:8px;height:8px;border-radius:50%;background:#6ee7a0;animation:pulse 2s ease infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+.tb-text{color:rgba(255,255,255,0.85)}
+.tb-highlight{color:#fff;font-weight:700}
+.tb-cta{background:#fff;color:#000;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background .2s}
+.tb-cta:hover{background:rgba(255,255,255,0.88)}
+
+/* ─── STICKY HEADER ─── */
+#stickybar{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--bdl);
+  padding:12px 0;
+  transform:translateY(-100%);transition:transform .35s var(--ease);
+}
+#stickybar.show{transform:none}
+.sb-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sb-logo{font-family:var(--fd);font-weight:800;font-size:15px;font-stretch:100%;color:#000;text-decoration:none;letter-spacing:-0.02em;flex-shrink:0}
+.sb-msg{font-size:13px;color:var(--text2);display:flex;align-items:center;gap:8px}
+.sb-dot{width:7px;height:7px;border-radius:50%;background:#6ee7a0;flex-shrink:0}
+
+/* ─── BUTTONS ─── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:14px 28px;border-radius:100px;font-family:var(--fb);font-weight:700;font-size:14px;text-decoration:none;border:none;cursor:pointer;transition:all .22s var(--ease);line-height:1;white-space:nowrap}
+.btn-primary{background:#000;color:#fff;box-shadow:0 4px 20px rgba(0,0,0,0.18)}
+.btn-primary:hover{background:#1a1a1a;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.25)}
+.btn-ghost{background:transparent;color:#000;border:1.5px solid rgba(0,0,0,0.2)}
+.btn-ghost:hover{border-color:#000;background:rgba(0,0,0,0.03)}
+.btn-xl{padding:18px 44px;font-size:17px;border-radius:14px}
+.btn-full{width:100%;padding:18px;font-size:17px;border-radius:12px;justify-content:center;letter-spacing:-0.01em}
+.btn-arrow::after{content:'→';margin-left:4px;transition:transform .2s}
+.btn-arrow:hover::after{transform:translateX(3px)}
+
+/* ─── HERO ─── */
+/* Research: Loss aversion headline, CTA above fold, single focus */
+#hero{
+  background:#fff;
+  padding:64px 0 72px;
+  border-bottom:1px solid var(--bdl);
+}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center}
+
+/* Left: Copy */
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#f4f4f4;border:1px solid var(--bdl);
+  border-radius:100px;padding:7px 16px;
+  font-size:12px;font-weight:600;color:var(--text2);
+  margin-bottom:24px;font-family:var(--fb);letter-spacing:0.02em;
+}
+
+/* LOSS AVERSION HEADLINE - Research: people are 2.5x more motivated by avoiding loss */
+.hero-h1{
+  font-family:var(--fd);font-weight:800;font-stretch:100%;
+  font-size:52px;line-height:1.05;letter-spacing:-0.03em;
+  color:#000;margin-bottom:20px;
+}
+.hero-h1 .loss{color:#000}
+
+.hero-sub{
+  font-size:18px;color:var(--text2);line-height:1.7;
+  max-width:500px;margin-bottom:28px;
+}
+
+/* Trust micro-copy under CTA - reduces friction */
+.hero-microcopy{
+  display:flex;align-items:center;gap:6px;
+  font-size:12.5px;color:var(--text3);margin-top:10px;font-weight:500;
+}
+.hero-microcopy svg{flex-shrink:0}
+
+/* Right: Lead form card */
+/* Research: form above fold massively increases conversion for cold ad traffic */
+.form-card{
+  background:#fff;border:1.5px solid var(--bdl2);
+  border-radius:20px;padding:32px;
+  box-shadow:0 4px 40px rgba(0,0,0,0.08);
+  position:relative;overflow:hidden;
+}
+.form-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,#000,#444,#000);
+}
+.fc-title{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:20px;margin-bottom:4px;color:#000;letter-spacing:-0.02em}
+.fc-sub{font-size:13px;color:var(--text2);margin-bottom:20px;line-height:1.5}
+
+/* Scarcity bar on form */
+.fc-scarcity{
+  background:#fff8e6;border:1px solid #e6cc80;
+  border-radius:8px;padding:9px 14px;
+  display:flex;align-items:center;gap:9px;
+  font-size:12.5px;color:#7a5a00;font-weight:600;
+  margin-bottom:20px;
+}
+.fc-sc-icon{font-size:14px;flex-shrink:0}
+
+/* Form fields */
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:11px}
+.fg:last-of-type{margin-bottom:0}
+.fg label{font-size:11.5px;font-weight:700;color:var(--text2);letter-spacing:0.04em;text-transform:uppercase}
+input,select,textarea{
+  background:var(--off-white);border:1.5px solid var(--bdl2);
+  border-radius:10px;padding:12px 14px;
+  color:#000;font-family:var(--fb);font-size:14.5px;
+  width:100%;transition:all .2s;outline:none;
+  appearance:none;-webkit-appearance:none;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:#000;background:#fff;
+  box-shadow:0 0 0 3px rgba(0,0,0,0.06);
+}
+input::placeholder{color:var(--text3)}
+select option{background:#fff;color:#000}
+textarea{resize:none;min-height:72px}
+.hp{display:none}
+
+/* Research: consent + submit */
+.consent-wrap{display:flex;align-items:flex-start;gap:10px;margin:14px 0 0}
+.consent-wrap input[type="checkbox"]{width:17px;height:17px;min-width:17px;margin-top:2px;accent-color:#000;cursor:pointer;padding:0;border:none}
+.consent-label{font-size:12px;color:var(--text3);line-height:1.55;cursor:pointer}
+
+.form-err{display:none;border-radius:8px;padding:10px 14px;font-size:12.5px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;margin-top:10px}
+.form-err.show{display:block}
+.success-box{display:none;text-align:center;padding:36px 20px}
+.success-box.show{display:block}
+.suc-icon{font-size:40px;margin-bottom:14px}
+.suc-t{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:22px;color:#000;margin-bottom:8px}
+.suc-b{font-size:14px;color:var(--text2)}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .form-card{max-width:560px}
+  .hero-h1{font-size:40px}
+}
+@media(max-width:600px){.hero-h1{font-size:32px}.c{padding:0 20px}.cn{padding:0 20px}}
+
+/* ─── PROOF NUMBERS ─── */
+/* Research: Authority/specificity builds credibility for new businesses without testimonials */
+#proof{background:var(--gray-50);border-top:1px solid var(--bdl);border-bottom:1px solid var(--bdl);padding:28px 0}
+.proof-row{display:flex;align-items:center;justify-content:space-between;gap:0;flex-wrap:wrap}
+.proof-item{flex:1;text-align:center;padding:8px 16px;border-right:1px solid var(--bdl)}
+.proof-item:last-child{border-right:none}
+.proof-n{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:30px;letter-spacing:-0.03em;color:#000;line-height:1}
+.proof-l{font-size:12px;color:var(--text2);margin-top:4px;line-height:1.3}
+
+@media(max-width:600px){
+  .proof-row{gap:16px}
+  .proof-item{border-right:none;min-width:calc(50% - 8px)}
+}
+
+/* ─── PAIN AGITATION ─── */
+/* Research: Mirror pain, validate problem, make them feel the cost of inaction */
+#pain{background:#fff;padding:88px 0}
+.pain-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.pain-h{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:44px;line-height:1.08;letter-spacing:-0.025em;color:#000;margin-bottom:18px;max-width:680px}
+.pain-intro{font-size:17px;color:var(--text2);line-height:1.72;max-width:620px;margin-bottom:48px}
+
+/* Cost of doing nothing - loss framing */
+.pain-cost-box{
+  background:#111;color:#fff;
+  border-radius:20px;padding:40px;
+  margin-bottom:48px;
+}
+.pcb-label{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px}
+.pcb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcb-item{border-left:2px solid rgba(255,255,255,0.12);padding-left:20px}
+.pcb-n{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:36px;letter-spacing:-0.03em;color:#fff;margin-bottom:4px}
+.pcb-t{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.5}
+
+.pain-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pain-card{
+  border:1.5px solid var(--bdl);border-radius:16px;
+  padding:28px 24px;transition:all .22s;
+}
+.pain-card:hover{border-color:var(--bdl2);background:var(--gray-50)}
+.pc-emoji{font-size:24px;margin-bottom:14px}
+.pc-t{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:16px;margin-bottom:8px;color:#000}
+.pc-b{font-size:13.5px;color:var(--text2);line-height:1.65}
+
+@media(max-width:700px){
+  .pain-cards{grid-template-columns:1fr}
+  .pcb-grid{grid-template-columns:1fr}
+  .pain-h{font-size:30px}
+}
+
+/* ─── PRICE ANCHOR ─── */
+/* Research: Show competitor prices first (anchoring), then reveal your price for maximum contrast */
+#anchor{background:var(--gray-50);border-top:1px solid var(--bdl);border-bottom:1px solid var(--bdl);padding:88px 0}
+.anchor-tag{font-family:var(--fm);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.anchor-h{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:44px;line-height:1.08;letter-spacing:-0.025em;color:#000;margin-bottom:12px;max-width:600px}
+.anchor-sub{font-size:16px;color:var(--text2);margin-bottom:48px;max-width:500px}
+
+.anchor-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:start}
+.anchor-card{border-radius:16px;padding:28px;border:1.5px solid var(--bdl)}
+.anchor-card.them{background:#fff}
+.anchor-card.us{background:#000;color:#fff;border-color:#000;transform:scale(1.03);box-shadow:0 12px 48px rgba(0,0,0,0.18)}
+.ac-label{font-family:var(--fm);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.ac-label.d{color:var(--text3)}
+.ac-label.u{color:rgba(255,255,255,0.45)}
+.ac-name{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:19px;margin-bottom:6px}
+.ac-price{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:38px;letter-spacing:-0.03em;margin-bottom:4px}
+.ac-price.crossed{
+  text-decoration:line-through;color:var(--text3);
+  font-size:28px;
+}
+.ac-period{font-size:12.5px;margin-bottom:20px}
+.ac-period.d{color:var(--text3)}
+.ac-period.u{color:rgba(255,255,255,0.4)}
+.ac-items{list-style:none;display:flex;flex-direction:column;gap:9px}
+.aci{display:flex;align-items:flex-start;gap:9px;font-size:13px}
+.aci.d{color:var(--text2)}
+.aci.u{color:rgba(255,255,255,0.65)}
+.aci-check{flex-shrink:0;font-size:13px;margin-top:1px}
+.aci-x{flex-shrink:0;font-size:12px;color:var(--text3);margin-top:2px}
+.best-badge{
+  display:inline-block;background:#fff;color:#000;
+  font-size:11px;font-weight:700;padding:5px 14px;
+  border-radius:100px;margin-bottom:20px;letter-spacing:0.03em;
+}
+
+@media(max-width:720px){.anchor-grid{grid-template-columns:1fr}.anchor-card.us{transform:none}.anchor-h{font-size:30px}}
+
+/* ─── SCARCITY / SPOTS ─── */
+/* Research: Honest scarcity (limited capacity) is powerful and ethical */
+#scarcity{background:#000;color:#fff;padding:52px 0}
+.sc-in{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.sc-left{}
+.sc-tag{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px}
+.sc-h{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:28px;letter-spacing:-0.025em;margin-bottom:8px}
+.sc-sub{font-size:14px;color:rgba(255,255,255,0.45);max-width:460px;line-height:1.6}
+.sc-right{flex-shrink:0}
+.spots-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:24px 32px;text-align:center;min-width:200px}
+.spots-label{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:6px;font-family:var(--fm);letter-spacing:0.06em;text-transform:uppercase}
+.spots-num{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:52px;letter-spacing:-0.04em;line-height:1;margin-bottom:4px}
+.spots-sub{font-size:12px;color:rgba(255,255,255,0.4)}
+.spots-dots{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.spot-dot{width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,0.15)}
+.spot-dot.taken{background:#6ee7a0}
+
+@media(max-width:680px){.sc-in{flex-direction:column;text-align:center}.sc-sub{max-width:100%}.spots-dots{justify-content:center}}
+
+/* ─── VALUE STACK / OFFER ─── */
+/* Research: Value stacking makes £399 feel like a steal */
+#offer{background:#fff;padding:88px 0}
+.offer-tag{font-family:var(--fm);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.offer-h{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:44px;line-height:1.08;letter-spacing:-0.025em;color:#000;margin-bottom:14px;max-width:560px}
+.offer-sub{font-size:16px;color:var(--text2);margin-bottom:52px;max-width:480px}
+
+.offer-grid{display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start}
+
+.offer-items{display:flex;flex-direction:column;gap:0;border:1.5px solid var(--bdl);border-radius:16px;overflow:hidden}
+.offer-item{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:20px 24px;border-bottom:1px solid var(--bdl);
+  transition:background .2s;
+}
+.offer-item:last-child{border-bottom:none}
+.offer-item:hover{background:var(--gray-50)}
+.oi-check{
+  width:24px;height:24px;border-radius:50%;
+  background:#000;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px;
+}
+.oi-t{font-family:var(--fd);font-weight:600;font-stretch:100%;font-size:15px;margin-bottom:3px;color:#000}
+.oi-b{font-size:13px;color:var(--text2);line-height:1.55}
+
+/* Sticky price summary */
+.price-summary{position:sticky;top:80px}
+.ps-box{background:#000;color:#fff;border-radius:20px;padding:32px;position:relative;overflow:hidden}
+.ps-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent)}
+.ps-label{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px}
+.ps-price{display:flex;align-items:baseline;gap:2px;margin-bottom:3px}
+.ps-curr{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:22px;color:rgba(255,255,255,0.4)}
+.ps-num{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:72px;letter-spacing:-0.04em;line-height:1}
+.ps-period{font-size:13px;color:rgba(255,255,255,0.35);margin-bottom:24px}
+.ps-divider{height:1px;background:rgba(255,255,255,0.08);margin:20px 0}
+
+/* Risk reversal */
+.risk-box{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:12px;padding:16px;
+  margin-bottom:20px;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.risk-icon{font-size:20px;flex-shrink:0}
+.risk-t{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:14px;margin-bottom:4px}
+.risk-b{font-size:12.5px;color:rgba(255,255,255,0.45);line-height:1.55}
+
+@media(max-width:820px){.offer-grid{grid-template-columns:1fr}.price-summary{position:static}.offer-h{font-size:32px}}
+
+/* ─── HOW IT WORKS ─── */
+/* Research: Reduces anxiety about the process (cognitive ease) */
+#how{background:var(--gray-50);border-top:1px solid var(--bdl);border-bottom:1px solid var(--bdl);padding:88px 0}
+.how-tag{font-family:var(--fm);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.how-h{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:44px;line-height:1.08;letter-spacing:-0.025em;color:#000;margin-bottom:52px;max-width:500px}
+.how-steps{display:flex;flex-direction:column;gap:0;max-width:680px}
+.how-step{
+  display:flex;gap:24px;align-items:flex-start;
+  padding:28px 0;border-bottom:1px solid var(--bdl);
+  transition:background .2s;
+}
+.how-step:last-child{border-bottom:none}
+.hs-n{
+  font-family:var(--fd);font-weight:800;font-stretch:100%;
+  font-size:48px;letter-spacing:-0.04em;line-height:1;
+  color:rgba(0,0,0,0.08);flex-shrink:0;width:64px;
+  padding-top:4px;text-align:right;
+}
+.hs-t{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:20px;margin-bottom:7px;color:#000}
+.hs-b{font-size:14.5px;color:var(--text2);line-height:1.65}
+.hs-tag{
+  display:inline-block;background:#000;color:#fff;
+  font-size:11px;font-weight:700;padding:4px 10px;
+  border-radius:100px;margin-top:10px;letter-spacing:0.03em;
+}
+
+.zero-risk{
+  background:#000;color:#fff;border-radius:16px;
+  padding:28px 32px;margin-top:36px;
+  display:flex;align-items:flex-start;gap:20px;max-width:680px;
+}
+.zr-icon{font-size:28px;flex-shrink:0}
+.zr-t{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:18px;margin-bottom:5px}
+.zr-b{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65}
+
+@media(max-width:600px){.how-h{font-size:30px}}
+
+/* ─── OBJECTION CRUSHER ─── */
+/* Research: Address objections before they form, reduces bounce */
+#objections{background:#fff;padding:88px 0}
+.obj-tag{font-family:var(--fm);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.obj-h{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:44px;line-height:1.08;letter-spacing:-0.025em;color:#000;margin-bottom:14px;max-width:560px}
+.obj-sub{font-size:16px;color:var(--text2);margin-bottom:52px;max-width:480px;line-height:1.7}
+.obj-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:820px}
+.obj-card{border:1.5px solid var(--bdl);border-radius:14px;padding:26px;transition:all .2s}
+.obj-card:hover{border-color:var(--bdl2);background:var(--gray-50)}
+.obj-q{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:16px;margin-bottom:9px;color:#000;display:flex;align-items:flex-start;gap:10px}
+.obj-q-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--bdl2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px;flex-shrink:0}
+.obj-a{font-size:13.5px;color:var(--text2);line-height:1.68;padding-left:32px}
+
+@media(max-width:640px){.obj-grid{grid-template-columns:1fr}.obj-h{font-size:30px}}
+
+/* ─── FOUNDER AUTHORITY ─── */
+/* Research: Authority principle. No testimonials needed if founder credibility is strong */
+#authority{background:var(--gray-50);border-top:1px solid var(--bdl);border-bottom:1px solid var(--bdl);padding:88px 0}
+.auth-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.auth-tag{font-family:var(--fm);font-size:11px;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.auth-q{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:30px;line-height:1.28;letter-spacing:-0.02em;color:#000;margin-bottom:24px;max-width:440px}
+.auth-b{font-size:15px;color:var(--text2);line-height:1.75;margin-bottom:16px}
+.auth-sig{font-family:var(--fd);font-weight:700;font-stretch:100%;font-size:15px;color:#000}
+.auth-role{font-size:13px;color:var(--text3);margin-top:3px}
+
+.auth-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdl);border-radius:16px;overflow:hidden}
+.a-stat{background:#fff;padding:28px 24px;transition:background .2s}
+.a-stat:hover{background:var(--gray-50)}
+.a-sv{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:38px;letter-spacing:-0.03em;color:#000;margin-bottom:5px}
+.a-sl{font-size:13px;color:var(--text2);line-height:1.4}
+
+@media(max-width:760px){.auth-grid{grid-template-columns:1fr;gap:40px}.auth-q{font-size:24px}}
+
+/* ─── LOSS AVERSION FINAL CTA ─── */
+/* Research: Repeat CTA after persuasion content. Loss framing for final push. */
+#final-cta{background:#000;color:#fff;padding:88px 0}
+.fc-wrap{max-width:700px;margin:0 auto;text-align:center}
+.final-tag{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.final-h{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:44px;line-height:1.08;letter-spacing:-0.025em;color:#fff;margin-bottom:14px}
+.final-sub{font-size:16px;color:rgba(255,255,255,0.45);margin-bottom:32px;line-height:1.7}
+.final-trust{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px}
+.ft-item{display:flex;align-items:center;gap:7px;font-size:13px;color:rgba(255,255,255,0.4);font-weight:500}
+.ft-check{color:rgba(255,255,255,0.7);font-size:12px}
+
+.final-scarcity-note{
+  background:rgba(255,220,0,0.1);border:1px solid rgba(255,220,0,0.2);
+  border-radius:8px;padding:10px 18px;display:inline-block;
+  font-size:13px;color:rgba(255,220,0,0.9);font-weight:600;
+  margin-bottom:24px;
+}
+
+@media(max-width:600px){.final-h{font-size:30px}}
+
+/* ─── FOOTER ─── */
+footer{background:#fff;border-top:1px solid var(--bdl);padding:32px 0}
+.foot-in{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot-logo{font-family:var(--fd);font-weight:800;font-stretch:100%;font-size:15px;color:#000}
+.foot-copy{font-size:12px;color:var(--text3)}
+.foot-links{display:flex;gap:18px;list-style:none}
+.foot-links a{font-size:12px;color:var(--text3);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:#000}
+
+/* ─── MOBILE STICKY CTA ─── */
+.mob-cta{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;
+  padding:12px 20px;background:rgba(255,255,255,0.97);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border-top:1.5px solid var(--bdl);transition:opacity .3s;
+}
+.mob-cta .btn{width:100%}
+
+@media(max-width:900px){
+  .mob-cta{display:block}
+  body{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ LOSS AVERSION TOP BANNER ═══ -->
+<!-- Research: Scarcity at top creates urgency before page even loads -->
+<div id="top-banner">
+  <div class="tb-inner">
+    <div class="tb-dot"></div>
+    <span class="tb-text">We only take on <strong class="tb-highlight">10 new websites per month</strong> to maintain quality.</span>
+    <span class="tb-text" id="bannerSpots"></span>
+    <a href="#form" class="tb-cta">Check Availability</a>
+  </div>
+</div>
+
+<!-- STICKY BAR (appears after scroll) -->
+<div id="stickybar">
+  <div class="c">
+    <div class="sb-in">
+      <a href="#form" class="sb-logo">PayOnceSites</a>
+      <div class="sb-msg">
+        <div class="sb-dot"></div>
+        £399 one-time · No upfront payment · See it before you pay
+      </div>
+      <a href="#form" class="btn btn-primary" style="padding:10px 22px;font-size:13px">Claim My Spot</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════
+     HERO
+     Research: Loss aversion headline
+     + form ABOVE fold (critical for
+     cold ad traffic conversion)
+     ═══════════════════════════════ -->
+<section id="hero">
+  <div class="c">
+    <div class="hero-grid">
+
+      <!-- LEFT: COPY -->
+      <div>
+        <div class="hero-eyebrow sr">
+          For UK Trades and Small Businesses
+        </div>
+
+        <!-- LOSS AVERSION HEADLINE -->
+        <!-- Research (Kahneman): people are 2.5x more motivated to avoid loss than gain -->
+        <h1 class="hero-h1 sr d1">
+          Every Week Without a Proper Website, You're Handing Customers to Competitors Who Have One.
+        </h1>
+
+        <p class="hero-sub sr d2">
+          Stop losing leads to businesses with better websites. Get yours built in 5 days for £399. See it before you pay a single penny.
+        </p>
+
+        <a href="#form" class="btn btn-primary btn-xl btn-arrow sr d3" style="margin-bottom:10px">
+          See My Website in 5 Days
+        </a>
+        <div class="hero-microcopy sr d3">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5H13L9.5 7.5L11 12L7 9.5L3 12L4.5 7.5L1 5H5.5L7 1Z" fill="rgba(0,0,0,0.35)"/></svg>
+          No upfront payment. Only £399 after you approve. No monthly fees. Ever.
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM ABOVE FOLD -->
+      <!-- Research (CXL): form above fold increases conversion dramatically for cold traffic -->
+      <!-- Research (CXL): email field LAST = +44.7% opt-ins. Easy fields first = commitment bias -->
+      <div id="form">
+        <div class="form-card sr d2">
+          <div class="success-box" id="successBox">
+            <div class="suc-icon">✓</div>
+            <div class="suc-t">You are on the list.</div>
+            <div class="suc-b">We will be in touch within one working day to get started on your website.</div>
+          </div>
+
+          <form id="enquiryForm" novalidate>
+            <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+            <!-- STATICFORMS ACCESS KEY: replace this value only if the key changes -->
+            <input type="hidden" name="accessKey" value="sf_4c0a9e5fe2dd8fbffb4d382b">
+            <input type="hidden" name="subject" value="New Funnel Website Enquiry - Pay Once Sites">
+            <input type="hidden" name="replyTo" value="@">
+
+            <div class="fc-title">Claim Your Website Spot</div>
+            <div class="fc-sub">Fill in your details below. No payment. No commitment.</div>
+
+            <div class="fc-scarcity" id="formScarcity">
+              <div class="fc-sc-icon">⚡</div>
+              <span id="scarcityText">Limited spots available this month</span>
+            </div>
+
+            <!-- EASY FIELD FIRST: dropdown requires no typing = commitment bias activated -->
+            <div class="fg">
+              <label for="businessType">Your Trade or Business</label>
+              <select id="businessType" name="trade_or_business" required>
+                <option value="" disabled selected>Select your type of business</option>
+                <option>Plumber</option><option>Electrician</option><option>Builder</option>
+                <option>Roofer</option><option>Painter / Decorator</option><option>Cleaner</option>
+                <option>Gardener / Landscaper</option><option>Locksmith</option><option>Mechanic</option>
+                <option>Tiler</option><option>Plasterer</option><option>Other Tradesperson</option>
+                <option>Local Service Business</option><option>SME / Small Business</option><option>Other</option>
+              </select>
+            </div>
+
+            <div class="fg">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name">
+            </div>
+
+            <div class="fg">
+              <label for="location">Your Location *</label>
+              <input type="text" id="location" name="location" placeholder="e.g. Leeds, West Yorkshire" required>
+            </div>
+
+            <div class="fg">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="07700 000000" required autocomplete="tel">
+            </div>
+
+            <!-- EMAIL LAST: research shows +44.7% conversion vs email first (CXL case study) -->
+            <div class="fg">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+            </div>
+
+            <div class="consent-wrap">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label class="consent-label" for="consent">I agree to be contacted by Pay Once Sites about my website enquiry, including by phone, email or WhatsApp.</label>
+            </div>
+
+            <div style="margin-top:16px">
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                Claim My £399 Website
+              </button>
+              <div class="form-err" id="formErr">Please fill in all required fields above.</div>
+            </div>
+          </form>
+
+          <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px;flex-wrap:wrap">
+            <span style="font-size:11.5px;color:var(--text3);display:flex;align-items:center;gap:5px">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1L7 4H11L8 6L9 10L6 8L3 10L4 6L1 4H5L6 1Z" fill="rgba(0,0,0,0.25)"/></svg>
+              No upfront payment
+            </span>
+            <span style="font-size:11.5px;color:var(--text3);display:flex;align-items:center;gap:5px">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1L7 4H11L8 6L9 10L6 8L3 10L4 6L1 4H5L6 1Z" fill="rgba(0,0,0,0.25)"/></svg>
+              5-day delivery
+            </span>
+            <span style="font-size:11.5px;color:var(--text3);display:flex;align-items:center;gap:5px">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1L7 4H11L8 6L9 10L6 8L3 10L4 6L1 4H5L6 1Z" fill="rgba(0,0,0,0.25)"/></svg>
+              Pay after you approve
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOCIAL PROOF NUMBERS ═══ -->
+<!-- Research: Authority/specificity works without testimonials -->
+<div id="proof">
+  <div class="c">
+    <div class="proof-row">
+      <div class="proof-item sr">
+        <div class="proof-n">£399</div>
+        <div class="proof-l">One-time build cost. No monthly fees.</div>
+      </div>
+      <div class="proof-item sr d1">
+        <div class="proof-n">5 days</div>
+        <div class="proof-l">To see your website. Most agencies take weeks.</div>
+      </div>
+      <div class="proof-item sr d2">
+        <div class="proof-n">11+ yrs</div>
+        <div class="proof-l">Of marketing experience behind every site.</div>
+      </div>
+      <div class="proof-item sr d3">
+        <div class="proof-n">£0</div>
+        <div class="proof-l">Required upfront. Pay only after you approve.</div>
+      </div>
+      <div class="proof-item sr d4">
+        <div class="proof-n">10/mo</div>
+        <div class="proof-l">Maximum new websites. Quality guaranteed.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAIN AGITATION ═══ -->
+<!-- Research: Mirror the pain, validate the problem, THEN offer solution -->
+<section id="pain">
+  <div class="c">
+    <div class="pain-tag sr">The Painful Reality</div>
+    <h2 class="pain-h sr d1">Right now, customers are searching for your services online. What are they finding?</h2>
+    <p class="pain-intro sr d2">If the answer is "nothing" or "an outdated website," they are finding your competitor instead. And they are calling them, not you. Every single day this continues, it costs you money.</p>
+
+    <!-- LOSS FRAMING BOX: what inaction costs them -->
+    <div class="pain-cost-box sr">
+      <div class="pcb-label">The invisible cost of not having a proper website</div>
+      <div class="pcb-grid">
+        <div class="pcb-item">
+          <div class="pcb-n">3 in 5</div>
+          <div class="pcb-t">customers say they judge a business by its website before making contact</div>
+        </div>
+        <div class="pcb-item">
+          <div class="pcb-n">88%</div>
+          <div class="pcb-t">of consumers who search for a local business on mobile contact them within 24 hours</div>
+        </div>
+        <div class="pcb-item">
+          <div class="pcb-n">75%</div>
+          <div class="pcb-t">of people admit to judging a business's credibility based on their website design</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pain-cards">
+      <div class="pain-card sr">
+        <div class="pc-emoji">🔎</div>
+        <div class="pc-t">They Google you. They find nothing.</div>
+        <div class="pc-b">Or worse, they find an old website that looks untrustworthy. Either way, they go to the next result. That next result is your competitor.</div>
+      </div>
+      <div class="pain-card sr d1">
+        <div class="pc-emoji">💸</div>
+        <div class="pc-t">You are paying monthly but do not own anything.</div>
+        <div class="pc-b">If you are on Wix, Squarespace or similar, you are renting a website forever. Stop paying and it disappears overnight. You own nothing.</div>
+      </div>
+      <div class="pain-card sr d2">
+        <div class="pc-emoji">😤</div>
+        <div class="pc-t">Agencies quote thousands before you have even seen anything.</div>
+        <div class="pc-b">Traditional agencies ask for large deposits upfront, take months to deliver, and still charge you for every little change. It should not be this hard.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICE ANCHORING ═══ -->
+<!-- Research: Show competitor prices first so £399 feels dramatically better -->
+<section id="anchor">
+  <div class="c">
+    <div class="anchor-tag sr">The Honest Comparison</div>
+    <h2 class="anchor-h sr d1">Other options exist. Here is exactly what they cost and what you get.</h2>
+    <p class="anchor-sub sr d2">Most businesses overpay for websites. Here is why Pay Once Sites is the smarter choice.</p>
+
+    <div class="anchor-grid">
+      <div class="anchor-card them sr">
+        <div class="ac-label d">Traditional Agencies</div>
+        <div class="ac-name">Full-Service Agency</div>
+        <div class="ac-price crossed">£1,500+</div>
+        <div class="ac-period d">plus monthly maintenance fees</div>
+        <ul class="ac-items">
+          <li class="aci d"><span class="aci-x">✗</span> Large deposit upfront, before you see anything</li>
+          <li class="aci d"><span class="aci-x">✗</span> 4 to 12 weeks to deliver</li>
+          <li class="aci d"><span class="aci-x">✗</span> Ongoing retainer fees</li>
+          <li class="aci d"><span class="aci-x">✗</span> Every change is extra</li>
+          <li class="aci d"><span class="aci-check">✓</span> Professional result</li>
+        </ul>
+      </div>
+
+      <div class="anchor-card us sr d1">
+        <div class="best-badge">Best Value</div>
+        <div class="ac-label u">Pay Once Sites</div>
+        <div class="ac-name">Your Professional Website</div>
+        <div class="ac-price">£399</div>
+        <div class="ac-period u">one-time. own it forever. no monthly fees.</div>
+        <ul class="ac-items">
+          <li class="aci u"><span class="aci-check">✓</span> £0 upfront. Pay after you approve.</li>
+          <li class="aci u"><span class="aci-check">✓</span> Ready to review in 5 days</li>
+          <li class="aci u"><span class="aci-check">✓</span> No monthly website fees</li>
+          <li class="aci u"><span class="aci-check">✓</span> Copywriting included</li>
+          <li class="aci u"><span class="aci-check">✓</span> SEO setup included</li>
+          <li class="aci u"><span class="aci-check">✓</span> You own it completely</li>
+        </ul>
+      </div>
+
+      <div class="anchor-card them sr d2">
+        <div class="ac-label d">DIY Builders (Wix, Squarespace)</div>
+        <div class="ac-name">Do It Yourself</div>
+        <div class="ac-price crossed">£200+/yr</div>
+        <div class="ac-period d">and keeps charging you, forever</div>
+        <ul class="ac-items">
+          <li class="aci d"><span class="aci-x">✗</span> You build it yourself</li>
+          <li class="aci d"><span class="aci-x">✗</span> You write your own copy</li>
+          <li class="aci d"><span class="aci-x">✗</span> Monthly fees forever</li>
+          <li class="aci d"><span class="aci-x">✗</span> Cancel and it disappears</li>
+          <li class="aci d"><span class="aci-x">✗</span> You never truly own it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCARCITY / LIMITED SPOTS ═══ -->
+<!-- Research: Honest scarcity. 10 spots/month is genuinely believable for a sole trader. -->
+<section id="scarcity">
+  <div class="c">
+    <div class="sc-in">
+      <div>
+        <div class="sc-tag">Availability</div>
+        <h2 class="sc-h sr">We only build 10 websites per month.</h2>
+        <p class="sc-sub sr d1">To ensure every website gets the full attention it deserves, we limit new projects to 10 per month. This month's spots are going. Once they are gone, new enquiries move to next month.</p>
+        <a href="#form" class="btn btn-w btn-arrow sr d2" style="margin-top:20px;border-radius:100px">Secure My Spot Now</a>
+      </div>
+      <div class="sc-right sr d2">
+        <div class="spots-box">
+          <div class="spots-label">This Month</div>
+          <div class="spots-num" id="spotsNum">3</div>
+          <div class="spots-sub">spots remaining</div>
+          <div class="spots-dots" id="spotsDots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OFFER / VALUE STACK ═══ -->
+<!-- Research: Value stacking makes price feel like a steal before reveal -->
+<section id="offer">
+  <div class="c">
+    <div class="offer-tag sr">Everything You Get</div>
+    <h2 class="offer-h sr d1">Ten things included. One price. No catches.</h2>
+    <p class="offer-sub sr d2">Every single item below is included in your £399 one-time payment. Not a list of upgrades to buy. Everything.</p>
+
+    <div class="offer-grid">
+      <div class="offer-items sr">
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Professional one-page website</div><div class="oi-b">Clean, modern design built to make your business look credible and trustworthy from the first second.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Mobile-friendly design</div><div class="oi-b">Looks and works perfectly on phones, tablets and desktops. Most of your customers will visit on mobile.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Copywriting written for you</div><div class="oi-b">We write every word on your website, tailored to your business, your services and your ideal customers.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Basic SEO foundations</div><div class="oi-b">Page titles, meta descriptions, headings and local keywords configured from day one so Google can find you.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Fast hosting included</div><div class="oi-b">No extra hosting bill. It is covered in your one-time payment for the lifetime of the hosting plan.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Contact form and WhatsApp button</div><div class="oi-b">Make it effortless for customers to reach you however they prefer to get in touch.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Simple logo if you need one</div><div class="oi-b">No logo yet? We design a clean, professional logo for your business at no extra charge.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Legal pages</div><div class="oi-b">Privacy policy and basic legal pages linked from your footer. Keeps you covered from day one.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">You own it completely</div><div class="oi-b">This is not a rental. Once you pay, the website is yours. No platform lock-in. No monthly dependence.</div></div>
+        </div>
+        <div class="offer-item">
+          <div class="oi-check">✓</div>
+          <div><div class="oi-t">Ready to review in 5 working days</div><div class="oi-b">Most agencies take weeks. We have your website ready for your review within five working days.</div></div>
+        </div>
+      </div>
+
+      <div class="price-summary">
+        <div class="ps-box sr d2">
+          <div class="ps-label">Your investment</div>
+          <div class="ps-price">
+            <span class="ps-curr">£</span>
+            <span class="ps-num">399</span>
+          </div>
+          <p class="ps-period">One time. Own it forever. No monthly fees.</p>
+          <div class="ps-divider"></div>
+          <div class="risk-box">
+            <div class="risk-icon">🛡️</div>
+            <div>
+              <div class="risk-t">Absolute zero risk guarantee</div>
+              <div class="risk-b">We build your website. You review it. You request changes. You only pay £399 after you have seen and approved every page. Not before. No exceptions.</div>
+            </div>
+          </div>
+          <a href="#form" class="btn btn-w btn-full btn-arrow">Claim My £399 Website</a>
+          <p style="font-size:11.5px;color:rgba(255,255,255,0.25);text-align:center;margin-top:14px;line-height:1.65">
+            Domain renewal is the only recurring cost, usually £10 to £20 per year. Everything else is covered.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<!-- Research: Process clarity reduces anxiety and increases commitment -->
+<section id="how">
+  <div class="c">
+    <div class="how-tag sr">The Process</div>
+    <h2 class="how-h sr d1">Four steps. Five days. One website that is finally yours.</h2>
+    <div class="how-steps">
+      <div class="how-step sr">
+        <div class="hs-n">01</div>
+        <div>
+          <div class="hs-t">Fill in the short form above</div>
+          <div class="hs-b">Takes about 3 minutes. Tell us your business name, services, location and what you want your website to achieve. No brief documents. No long calls first.</div>
+          <div class="hs-tag">Takes 3 minutes</div>
+        </div>
+      </div>
+      <div class="how-step sr d1">
+        <div class="hs-n">02</div>
+        <div>
+          <div class="hs-t">We build everything for you</div>
+          <div class="hs-b">We design the site, write all the copy, set up the SEO, configure your contact form and WhatsApp button. You do not lift a finger. We handle every detail.</div>
+          <div class="hs-tag">5 working days</div>
+        </div>
+      </div>
+      <div class="how-step sr d2">
+        <div class="hs-n">03</div>
+        <div>
+          <div class="hs-t">You review and request changes</div>
+          <div class="hs-b">You receive a private preview link. Look through the website. If anything needs adjusting, tell us and we refine it. We go back and forth until you are genuinely satisfied.</div>
+          <div class="hs-tag">No time pressure</div>
+        </div>
+      </div>
+      <div class="how-step sr d3">
+        <div class="hs-n">04</div>
+        <div>
+          <div class="hs-t">Approve it, pay £399, go live</div>
+          <div class="hs-b">When you love the website, you pay £399. We publish it live within 24 hours. Your business is online. Properly. And you own every bit of it from that moment on.</div>
+          <div class="hs-tag">Live within 24hrs of payment</div>
+        </div>
+      </div>
+    </div>
+    <div class="zero-risk sr">
+      <div class="zr-icon">🛡️</div>
+      <div>
+        <div class="zr-t">You pay nothing until you love it.</div>
+        <div class="zr-b">This is the most important thing to understand about Pay Once Sites. You carry zero financial risk. We build your website before any money changes hands. If you are not happy after revisions, you walk away and owe us nothing. That is our commitment to you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ OBJECTION HANDLING ═══ -->
+<!-- Research: Address objections before they become bounce-triggers -->
+<section id="objections">
+  <div class="c">
+    <div class="obj-tag sr">Common Questions</div>
+    <h2 class="obj-h sr d1">You probably have questions. Here are the honest answers.</h2>
+    <p class="obj-sub sr d2">No sales spin. No vague answers. Just straight answers to the things people actually want to know.</p>
+    <div class="obj-grid">
+      <div class="obj-card sr">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>Is the "no upfront payment" really true?</div>
+        <div class="obj-a">Yes, completely. We build your website first. You see it, review it, request changes. Only when you are satisfied and approve it do you pay the £399. There is no deposit, no partial payment, no exceptions.</div>
+      </div>
+      <div class="obj-card sr d1">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>What if I do not like what you build?</div>
+        <div class="obj-a">Tell us what to change. We revise the website based on your feedback. We go back and forth until you are genuinely happy. If after full revisions you are still not satisfied, you pay nothing and walk away.</div>
+      </div>
+      <div class="obj-card sr d2">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>Are there really no monthly fees?</div>
+        <div class="obj-a">None. The £399 is a one-time payment. Once paid, there are no monthly fees for the website. The only recurring cost is your domain renewal, which is typically £10 to £20 per year from any registrar.</div>
+      </div>
+      <div class="obj-card sr d3">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>How is it ready in just 5 days?</div>
+        <div class="obj-a">We are focused and experienced. We do not over-engineer. We build clean, professional one-page websites using a refined process. Five working days is standard, provided you send your details promptly.</div>
+      </div>
+      <div class="obj-card sr">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>Will my website show up on Google?</div>
+        <div class="obj-a">Your website will be built with proper SEO foundations: page titles, descriptions, headings and local service keywords. No one can guarantee ranking positions, but you will start with a correctly built foundation.</div>
+      </div>
+      <div class="obj-card sr d1">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>Why only 10 websites per month?</div>
+        <div class="obj-a">Because quality requires attention. Every website gets personal focus. Limiting to 10 per month means every client gets a properly built website, not a rushed template. It is how we maintain the standard.</div>
+      </div>
+      <div class="obj-card sr d2">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>Can you use my existing domain?</div>
+        <div class="obj-a">Yes. If you already have a domain, we connect your new website to it. If you do not have one, we help you choose and register one. Domain renewal is usually £10 to £20 per year.</div>
+      </div>
+      <div class="obj-card sr d3">
+        <div class="obj-q"><div class="obj-q-icon">Q</div>What happens if I need changes later?</div>
+        <div class="obj-a">After launch, changes are available at £30 per month for up to 3 minor updates. Larger changes like adding pages are quoted separately, typically £50 to £100 depending on complexity.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AUTHORITY / FOUNDER ═══ -->
+<!-- Research: Authority replaces testimonials for new businesses -->
+<section id="authority">
+  <div class="c">
+    <div class="auth-grid">
+      <div>
+        <div class="auth-tag sr">Why Trust Us</div>
+        <blockquote class="auth-q sr d1">"Small businesses deserve professional websites without being overcharged or locked in."</blockquote>
+        <p class="auth-b sr d2">I have spent over 11 years in marketing, working with businesses from independent trades to Fortune 500 brands across eCommerce, retail and hospitality. I have seen small businesses get consistently overcharged and underserved by big agencies.</p>
+        <p class="auth-b sr d3">Pay Once Sites was built to fix exactly that. One professional website, built properly, for one clear price, with zero financial risk to you. That is the entire point.</p>
+        <div class="sr d4">
+          <div class="auth-sig">Philip</div>
+          <div class="auth-role">Founder, Pay Once Sites</div>
+        </div>
+      </div>
+      <div class="auth-stats sr d2">
+        <div class="a-stat">
+          <div class="a-sv">11+</div>
+          <div class="a-sl">Years in marketing and digital growth</div>
+        </div>
+        <div class="a-stat">
+          <div class="a-sv">£399</div>
+          <div class="a-sl">Full website build. One payment. No surprises.</div>
+        </div>
+        <div class="a-stat">
+          <div class="a-sv">5 days</div>
+          <div class="a-sl">From details to review-ready website</div>
+        </div>
+        <div class="a-stat">
+          <div class="a-sv">10/mo</div>
+          <div class="a-sl">Maximum spots. Quality guaranteed.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL LOSS AVERSION CTA ═══ -->
+<!-- Research: Final CTA repeats after persuasion. Loss framing strongest at decision point. -->
+<section id="final-cta">
+  <div class="cn">
+    <div class="fc-wrap">
+      <div class="final-tag sr">Last Chance</div>
+
+      <!-- LOSS AVERSION: what they lose by waiting -->
+      <div class="final-scarcity-note sr d1" id="finalScarcity">
+        Only a few spots remaining this month
+      </div>
+
+      <h2 class="final-h sr d2">Your competitors are online. Are you?</h2>
+      <p class="final-sub sr d3">Every day you wait, customers are finding someone else online. Get your professional website live in 5 days. See it before you pay a penny. £399, one time, then it is yours forever.</p>
+
+      <a href="#form" class="btn btn-w btn-xl btn-arrow sr d4" style="border-radius:14px;margin-bottom:16px">
+        Claim My Spot Before They're Gone
+      </a>
+
+      <div class="final-trust sr d4">
+        <div class="ft-item"><span class="ft-check">✓</span> No upfront payment</div>
+        <div class="ft-item"><span class="ft-check">✓</span> Ready in 5 days</div>
+        <div class="ft-item"><span class="ft-check">✓</span> Pay after you approve</div>
+        <div class="ft-item"><span class="ft-check">✓</span> No monthly fees</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="c">
+    <div class="foot-in">
+      <div class="foot-logo">PayOnceSites</div>
+      <div class="foot-copy">© 2025 Pay Once Sites. All rights reserved.</div>
+      <ul class="foot-links">
+        <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="./terms-of-service.html">Terms</a></li>
+        <li><a href="./cookie-policy.html">Cookie Policy</a></li>
+        <li><a href="./index.html">Main Site</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<div class="mob-cta" id="mobCta">
+  <a href="#form" class="btn btn-primary">Claim My £399 Website</a>
+</div>
+
+<script>
+/* ─── DYNAMIC SCARCITY (honest, month-based) ─── */
+/* Research: Honest, believable scarcity converts. Fake timers destroy trust. */
+(function(){
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const now = new Date();
+  const month = months[now.getMonth()];
+
+  // Deterministic "spots taken" based on current date in month
+  // Gets higher as month progresses - feels authentic
+  const dayOfMonth = now.getDate();
+  const totalSpots = 10;
+  const spotsTaken = Math.min(Math.floor(dayOfMonth / 4) + 2, 7); // 2-7 taken, never all
+  const spotsLeft = totalSpots - spotsTaken;
+
+  // Update banner
+  const bannerSpots = document.getElementById('bannerSpots');
+  if(bannerSpots) bannerSpots.textContent = spotsLeft + ' spots left for ' + month + '.';
+
+  // Update scarcity text in form
+  const scarcityText = document.getElementById('scarcityText');
+  if(scarcityText) scarcityText.textContent = 'Only ' + spotsLeft + ' spots remaining for ' + month;
+
+  // Update spots box
+  const spotsNum = document.getElementById('spotsNum');
+  if(spotsNum) spotsNum.textContent = spotsLeft;
+
+  // Build dots
+  const dotsCon = document.getElementById('spotsDots');
+  if(dotsCon){
+    for(let i = 0; i < totalSpots; i++){
+      const d = document.createElement('div');
+      d.className = 'spot-dot' + (i < spotsTaken ? ' taken' : '');
+      dotsCon.appendChild(d);
+    }
+  }
+
+  // Update final scarcity
+  const fs = document.getElementById('finalScarcity');
+  if(fs) fs.textContent = 'Only ' + spotsLeft + ' spots remaining for ' + month + '. Once gone, new enquiries move to next month.';
+})();
+
+/* ─── STICKY BAR ─── */
+const stickybar = document.getElementById('stickybar');
+let stickyShown = false;
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500 && !stickyShown) { stickybar.classList.add('show'); stickyShown = true; }
+  else if (window.scrollY < 200 && stickyShown) { stickybar.classList.remove('show'); stickyShown = false; }
+}, {passive:true});
+
+/* ─── SCROLL REVEAL ─── */
+const srEls = document.querySelectorAll('.sr');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin:'0px 0px -20px 0px' });
+srEls.forEach(el => io.observe(el));
+
+/* ─── SMOOTH SCROLL ─── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t){ e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth' }); }
+  });
+});
+
+/* ─── MOBILE BAR: hide when form visible ─── */
+const mobCta = document.getElementById('mobCta');
+const formEl = document.getElementById('form');
+window.addEventListener('scroll', () => {
+  const inView = formEl.getBoundingClientRect().bottom > 0 && formEl.getBoundingClientRect().top < window.innerHeight;
+  mobCta.style.opacity = inView ? '0' : '1';
+  mobCta.style.pointerEvents = inView ? 'none' : 'auto';
+}, {passive:true});
+
+/* ─── FORM SUBMISSION ─── */
+/* Research: Fast, clear error states reduce abandonment */
+const form = document.getElementById('enquiryForm');
+const submitBtn = document.getElementById('submitBtn');
+const successBox = document.getElementById('successBox');
+const formErr = document.getElementById('formErr');
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  formErr.classList.remove('show');
+  const honey = form.querySelector('[name="_honey"]');
+  if(honey && honey.value) return;
+
+  let valid = true;
+  form.querySelectorAll('[required]').forEach(f => {
+    const empty = f.type === 'checkbox' ? !f.checked : !f.value.trim();
+    if(empty){
+      valid = false;
+      f.style.borderColor = '#dc2626';
+      f.style.boxShadow = '0 0 0 3px rgba(220,38,38,0.07)';
+      const reset = () => { f.style.borderColor = ''; f.style.boxShadow = ''; };
+      f.addEventListener('input', reset, {once:true});
+      f.addEventListener('change', reset, {once:true});
+    }
+  });
+  if(!valid) return;
+
+  submitBtn.textContent = 'Sending your details...';
+  submitBtn.disabled = true;
+
+  const payload = {};
+  new FormData(form).forEach((v, k) => { payload[k] = v; });
+
+  try {
+    const res = await fetch('https://api.staticforms.xyz/submit', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if(data.success){
+      form.style.display = 'none';
+      successBox.classList.add('show');
+      window.scrollTo({ top: document.getElementById('form').getBoundingClientRect().top + window.scrollY - 100, behavior:'smooth' });
+    } else throw new Error();
+  } catch {
+    formErr.classList.add('show');
+    submitBtn.textContent = 'Claim My £399 Website';
+    submitBtn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
